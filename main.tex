@@ -1,0 +1,64 @@
+\documentclass[a4paper]{thesis}
+
+\usepackage{sty/packages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Information for the front pages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\myMaster}{MÁSTER UNIVERSITARIO EN INGENIERÍA DE TELECOMUNICACIONES}
+\newcommand{\myTitleEN}{[Title in english]}
+\newcommand{\myTitleES}{[Título en español]}
+\newcommand{\myFullname}{[Nombre completo]}
+\newcommand{\myEmail}{[email]}
+\newcommand{\myTutorFullname}{[Nombre completo del tutor]}
+\newcommand{\myDepartment}{[Departamento]}
+\newcommand{\currentYear}{2019}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+pdfauthor = {\myFullname~(\myEmail)},
+pdftitle = {\myTitleEN},
+}
+
+% Select what to do with todonotes: 
+\usepackage[disable]{todonotes} % notes not showed
+%\usepackage[draft]{todonotes}   % notes showed
+
+% Select what to do with command \comment:  
+\newcommand{\comment}[1]{}  %comment not shown
+%\newcommand{\comment}[1]{\par {\bfseries \color{blue} #1 \par}} %comment shown
+
+\makeglossaries
+\input{tex/acronyms.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+
+\frontmatter
+\input{tex/01_front/main.tex} % Double cover, details and summary
+\tableofcontents
+\listoffigures
+\listoftables
+\afterpage{\blankpage}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\input{tex/chapters/chapter_01.tex}
+\input{tex/chapters/chapter_02.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{alpha}
+\bibliography{bib/bibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Glossary
+\printglossary
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Annexes
+
+\end{document} 
