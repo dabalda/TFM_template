@@ -6,11 +6,13 @@
 \usepackage[left=25.4mm, right=25.4mm, top=25.4mm, bottom=25.4mm]{geometry}
 
 \usepackage{graphicx}
+\graphicspath{{img/}}
 \usepackage{xcolor}
 \definecolor{dark-green}{rgb}{0,0.5,0}
 \definecolor{etsitorange}{rgb}{1,0.4,0}
 
-\usepackage{subcaption}
+%\usepackage{subcaption}
+\usepackage{subfig}
 
 \usepackage{float}
 %\usepackage[export]{adjustbox}[2011/08/13]
@@ -92,3 +94,9 @@
 
 \setmainlanguage{english}
 \setotherlanguage{spanish}
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usetikzlibrary{automata,positioning}

@@ -9,3 +9,5 @@
 *.aux
 *.acn
 *.tdo
+*.bbl
+*.blg
