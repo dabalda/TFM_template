@@ -31,7 +31,7 @@ pdftitle = {\myTitleEN},
 \newcommand{\comment}[1]{\par {\bfseries \color{blue} #1 \par}} %comment shown
 
 \makeglossaries
-\input{tex/acronyms.tex}
+\loadglsentries{tex/acronyms}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document} 
@@ -41,6 +41,7 @@ pdftitle = {\myTitleEN},
 \tableofcontents
 \listoffigures
 \listoftables
+\printglossary[title={Glossary}]
 \afterpage{\blankpage}
 \cleardoublepage
 
@@ -55,11 +56,14 @@ pdftitle = {\myTitleEN},
 \bibliography{bib/bibliography}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Glossary
-\printglossary
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Annexes
+\renewcommand{\appendixname}{Annex}
+\renewcommand{\appendixtocname}{Annexes}
+\renewcommand{\appendixpagename}{Annexes}
+
+\begin{appendices}
+% Input annexes here
+\end{appendices}
 
 \listoftodos
 

@@ -11,3 +11,11 @@
 *.tdo
 *.bbl
 *.blg
+*.acr
+*.alg
+*.glg
+*.gls
+*.idx
+*.ilg
+*.ind
+*.xdy
